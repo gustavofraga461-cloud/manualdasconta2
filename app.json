@@ -1,0 +1,76 @@
+{
+  "expo": {
+    "name": "Manual das Contas",
+    "slug": "manual-das-contas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "manualdascontas",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0F0F11"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.manualdascontas.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Usamos biometria para desbloquear o Manual das Contas.",
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F0F11"
+      },
+      "package": "com.manualdascontas.app",
+      "versionCode": 1,
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "name": "Manual das Contas",
+      "shortName": "Contas",
+      "themeColor": "#0F0F11",
+      "backgroundColor": "#0F0F11"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#E50914",
+          "defaultChannel": "contas"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Usamos biometria para desbloquear o Manual das Contas."
+        }
+      ],
+      "expo-secure-store",
+      "expo-splash-screen"
+    ],
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#E50914",
+      "androidMode": "default",
+      "androidCollapsedTitle": "Manual das Contas"
+    }
+  }
+}
