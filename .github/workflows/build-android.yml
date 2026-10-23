@@ -31,6 +31,8 @@ jobs:
       - name: Instalar dependencias
         run: npm ci --legacy-peer-deps
 
+      - name: Ajustar dependencias Expo
+        run: npx expo install --fix
       - name: Gerar projeto Android
         run: npx expo prebuild --clean --platform android
         env:
